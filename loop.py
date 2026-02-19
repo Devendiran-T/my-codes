@@ -79,3 +79,22 @@
 #     print("Seat", seat_number, "booked for", name) 
 #     seat_number += 1   
 # print("All seats are booked!")
+
+# n = int(input("Enter number of terms: "))
+# t1 = 0
+# t2 = 1
+# for i in range(n):
+#     print(t1)
+#     t3 = t1 + t2
+#     t1 = t2
+#     t2 = t3
+
+t1 = 0
+t2 = 1
+
+n=int(input("enter the number: "))
+for i in range(n):
+    next = t1 + t2
+    print(next)
+    t1 = t2
+    t2 = next  
