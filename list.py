@@ -102,7 +102,7 @@
 # else:
 #     print("not palindrome") 
     
-#without using slicing
+# without using slicing
 # a=input("enter a string:")  
 # rew=""
 # for i in a:
@@ -121,7 +121,7 @@
 
 # print(reverse_number(123))
 
-#anagram
+# anagram
 
 # s1 = input("Enter first word: ")
 # s2 = input("Enter second word: ")
@@ -131,7 +131,7 @@
 # else:
 #     print("Not an anagram")
 
-#climbing stairs
+# climbing stairs
 # n = int(input("Enter number of steps: "))
 
 # if n == 1:
@@ -149,7 +149,7 @@
 
 #     print(b)
 
-#fizzbuzz
+# fizzbuzz
 # n = int(input("Enter a number: "))  
 # for i in range(1, n + 1):
 #     if i % 3 == 0 and i % 5 == 0:
@@ -161,7 +161,7 @@
 #     else:
 #         print(i)
     
-#single number
+# single number
 # def singleNumbers(nums):
 #     result = []
 #     for i in nums:
@@ -180,7 +180,7 @@
 
 
 
-#sign of the product of an array
+# sign of the product of an array
 # def arraySign(self, nums):
 #         sign = 1
         
@@ -192,7 +192,7 @@
         
 #         return sign
 
-#union
+# union
 
 # list1 = [1, 2, 3, 4]
 # list2 = [3, 4, 5, 6]
@@ -211,6 +211,28 @@
 #         union_list.append(item)
 # print("Union using loops:", union_list)
 
-#adding digits until single digit
+# adding digits until single digit
 # num=23
 # print(1+(num-1)%9)
+
+#contains duplicate
+# def containsDuplicate(nums):
+#     seen = set()
+#     for num in nums:
+#         if num in seen:
+#             return True
+#         seen.add(num)
+#     return False
+# print(containsDuplicate([1,1,2,3,4,5,6,7,8,9,0]))
+
+
+# # mySqrt(x):
+# import math 
+# x = 8
+# result = math.sqrt(x)   
+# print(result)
+
+#def fun(a,b):
+#     return a+b
+# print(fun(2,3))       
+
