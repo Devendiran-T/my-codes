@@ -170,153 +170,168 @@
     
     
 
-#abstaction
+# #abstaction
 
 
-from abc import ABC, abstractmethod
+# from abc import ABC, abstractmethod
 
-# Step 2: Abstract Vehicle class
-class Vehicle(ABC):
-    def __init__(self, number, total_seats):
-        self.number = number
-        self.total_seats = total_seats
+# # Step 2: Abstract Vehicle class
+# class Vehicle(ABC):
+#     def __init__(self, number, total_seats):
+#         self.number = number
+#         self.total_seats = total_seats
 
-    @abstractmethod
-    def calculate_fare(self):
-        pass
+#     @abstractmethod
+#     def calculate_fare(self):
+#         pass
 
-    def show_details(self):
-        print(f"Bus Number: {self.number}")
-        print(f"Total Seats: {self.total_seats}")
+#     def show_details(self):
+#         print(f"Bus Number: {self.number}")
+#         print(f"Total Seats: {self.total_seats}")
 
-# Step 5: LuxuryBus
-class LuxuryBus(Vehicle):
-    def calculate_fare(self):
-        return 500
+# # Step 5: LuxuryBus
+# class LuxuryBus(Vehicle):
+#     def calculate_fare(self):
+#         return 500
 
-# Step 7: OrdinaryBus
-class OrdinaryBus(Vehicle):
-    def calculate_fare(self):
-        return 200
+# # Step 7: OrdinaryBus
+# class OrdinaryBus(Vehicle):
+#     def calculate_fare(self):
+#         return 200
 
-# Step 9: SeatManager
-class SeatManager:
-    def __init__(self, total_seats):
-        self.__total_seats = total_seats
-        self.__booked = []
+# # Step 9: SeatManager
+# class SeatManager:
+#     def __init__(self, total_seats):
+#         self.__total_seats = total_seats
+#         self.__booked = []
 
-    def book_seat(self):
-        if len(self.__booked) < self.__total_seats:
-            seat_no = len(self.__booked) + 1
-            self.__booked.append(seat_no)
-            return seat_no
-        else:
-            return None
+#     def book_seat(self):
+#         if len(self.__booked) < self.__total_seats:
+#             seat_no = len(self.__booked) + 1
+#             self.__booked.append(seat_no)
+#             return seat_no
+#         else:
+#             return None
 
-    def cancel_seat(self, seat_no):
-        if seat_no in self.__booked:
-            self.__booked.remove(seat_no)
-            print(f"Seat {seat_no} cancelled successfully.")
-        else:
-            print("Invalid seat number!")
+#     def cancel_seat(self, seat_no):
+#         if seat_no in self.__booked:
+#             self.__booked.remove(seat_no)
+#             print(f"Seat {seat_no} cancelled successfully.")
+#         else:
+#             print("Invalid seat number!")
 
-    def available_seats(self):
-        return self.__total_seats - len(self.__booked)
+#     def available_seats(self):
+#         return self.__total_seats - len(self.__booked)
 
-# Step 13: Passenger class
-class Passenger:
-    def __init__(self, name, age):
-        self.name = name
-        self.age = age
+# # Step 13: Passenger class
+# class Passenger:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
 
-    def show(self):
-        print(f"Name: {self.name}, Age: {self.age}")
+#     def show(self):
+#         print(f"Name: {self.name}, Age: {self.age}")
 
-# Step 14: Ticket class
-class Ticket:
-    def __init__(self, passenger, bus, seat_no, fare):
-        self.passenger = passenger
-        self.bus = bus
-        self.seat_no = seat_no
-        self.fare = fare
+# # Step 14: Ticket class
+# class Ticket:
+#     def __init__(self, passenger, bus, seat_no, fare):
+#         self.passenger = passenger
+#         self.bus = bus
+#         self.seat_no = seat_no
+#         self.fare = fare
 
-    def show_ticket(self):
-        print("----- Ticket -----")
-        self.passenger.show()
-        print(f"Bus Number: {self.bus.number}")
-        print(f"Seat Number: {self.seat_no}")
-        print(f"Fare: {self.fare}")
-        print("------------------")
+#     def show_ticket(self):
+#         print("----- Ticket -----")
+#         self.passenger.show()
+#         print(f"Bus Number: {self.bus.number}")
+#         print(f"Seat Number: {self.seat_no}")
+#         print(f"Fare: {self.fare}")
+#         print("------------------")
 
-# Step 16: Choose bus type
-print("Select Bus Type:")
-print("1 → Luxury Bus")
-print("2 → Ordinary Bus")
-choice = input("Enter choice (1/2): ")
+# # Step 16: Choose bus type
+# print("Select Bus Type:")
+# print("1 → Luxury Bus")
+# print("2 → Ordinary Bus")
+# choice = input("Enter choice (1/2): ")
 
-bus_number = input("Enter Bus Number: ")
+# bus_number = input("Enter Bus Number: ")
 
-if choice == "1":
-    bus = LuxuryBus(bus_number, 5)
-elif choice == "2":
-    bus = OrdinaryBus(bus_number, 5)
-else:
-    print("Invalid choice, defaulting to Ordinary Bus")
-    bus = OrdinaryBus(bus_number, 5)
+# if choice == "1":
+#     bus = LuxuryBus(bus_number, 5)
+# elif choice == "2":
+#     bus = OrdinaryBus(bus_number, 5)
+# else:
+#     print("Invalid choice, defaulting to Ordinary Bus")
+#     bus = OrdinaryBus(bus_number, 5)
 
-# Step 18: Create SeatManager
-seat_manager = SeatManager(bus.total_seats)
+# # Step 18: Create SeatManager
+# seat_manager = SeatManager(bus.total_seats)
 
-# Step 19: Ticket list
-tickets = []
+# # Step 19: Ticket list
+# tickets = []
 
-# Step 20: Menu loop
-while True:
-    print("\n--- Menu ---")
-    print("1 → Available Seats")
-    print("2 → Book Seat")
-    print("3 → Cancel Seat")
-    print("4 → Show Tickets")
-    print("5 → Exit")
+# # Step 20: Menu loop
+# while True:
+#     print("\n--- Menu ---")
+#     print("1 → Available Seats")
+#     print("2 → Book Seat")
+#     print("3 → Cancel Seat")
+#     print("4 → Show Tickets")
+#     print("5 → Exit")
 
-    menu_choice = input("Enter choice: ")
+#     menu_choice = input("Enter choice: ")
 
-    if menu_choice == "1":
-        print(f"Available Seats: {seat_manager.available_seats()}")
+#     if menu_choice == "1":
+#         print(f"Available Seats: {seat_manager.available_seats()}")
 
-    elif menu_choice == "2":
-        name = input("Enter passenger name: ")
-        age = input("Enter passenger age: ")
-        seat_no = seat_manager.book_seat()
-        if seat_no is None:
-            print("Bus Full! Cannot book seat.")
-        else:
-            passenger = Passenger(name, age)
-            fare = bus.calculate_fare()
-            ticket = Ticket(passenger, bus, seat_no, fare)
-            tickets.append(ticket)
-            print("Seat booked successfully!")
-            ticket.show_ticket()
+#     elif menu_choice == "2":
+#         name = input("Enter passenger name: ")
+#         age = input("Enter passenger age: ")
+#         seat_no = seat_manager.book_seat()
+#         if seat_no is None:
+#             print("Bus Full! Cannot book seat.")
+#         else:
+#             passenger = Passenger(name, age)
+#             fare = bus.calculate_fare()
+#             ticket = Ticket(passenger, bus, seat_no, fare)
+#             tickets.append(ticket)
+#             print("Seat booked successfully!")
+#             ticket.show_ticket()
 
-    elif menu_choice == "3":
-        try:
-            seat_no = int(input("Enter seat number to cancel: "))
-            seat_manager.cancel_seat(seat_no)
-            # Optional: remove ticket from tickets list
-            tickets = [t for t in tickets if t.seat_no != seat_no]
-        except ValueError:
-            print("Invalid input!")
+#     elif menu_choice == "3":
+#         try:
+#             seat_no = int(input("Enter seat number to cancel: "))
+#             seat_manager.cancel_seat(seat_no)
+#             # Optional: remove ticket from tickets list
+#             tickets = [t for t in tickets if t.seat_no != seat_no]
+#         except ValueError:
+#             print("Invalid input!")
 
-    elif menu_choice == "4":
-        if not tickets:
-            print("No tickets booked yet.")
-        else:
-            for t in tickets:
-                t.show_ticket()
+#     elif menu_choice == "4":
+#         if not tickets:
+#             print("No tickets booked yet.")
+#         else:
+#             for t in tickets:
+#                 t.show_ticket()
 
-    elif menu_choice == "5":
-        print("Exiting program. Goodbye!")
-        break
+#     elif menu_choice == "5":
+#         print("Exiting program. Goodbye!")
+#         break
 
-    else:
-        print("Invalid choice! Please try again.")
+#     else:
+#         print("Invalid choice! Please try again.")
+
+#pascle triangle
+def pascal_triangle(n):
+    triangle = []
+    for i in range(n):
+        row = [1] * (i + 1)
+        for j in range(1, i):
+            row[j] = triangle[i - 1][j - 1] + triangle[i - 1][j]
+        triangle.append(row)
+    return triangle
+n = int(input("Enter the number of rows for Pascal's Triangle: "))
+result = pascal_triangle(n)
+for row in result:
+    print(row)
+        
