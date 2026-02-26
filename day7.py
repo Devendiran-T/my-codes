@@ -62,39 +62,39 @@
 
 # Pizza Bill Generator
 
-print("Welcome to the Pizza Bill Shop!")
-print("Pizza Category")
-print("1. Delux")
-print("2. Normal")
+# print("Welcome to the Pizza Bill Shop!")
+# print("Pizza Category")
+# print("1. Delux")
+# print("2. Normal")
 
-category = int(input("Enter the category of pizza (1/2): "))
+# category = int(input("Enter the category of pizza (1/2): "))
 
-print("\nPizza Type")
-print("1. Veg")
-print("2. Non-Veg")
+# print("\nPizza Type")
+# print("1. Veg")
+# print("2. Non-Veg")
 
-pizza_type = int(input("Enter the type of pizza (1/2): "))
+# pizza_type = int(input("Enter the type of pizza (1/2): "))
 
-# Base Price Calculation
-if category == 1 and pizza_type == 1:
-    base_price = 300
-    print("You selected Delux Veg Pizza. Price: Rs.", base_price)
+# # Base Price Calculation
+# if category == 1 and pizza_type == 1:
+#     base_price = 300
+#     print("You selected Delux Veg Pizza. Price: Rs.", base_price)
 
-elif category == 1 and pizza_type == 2:
-    base_price = 500
-    print("You selected Delux Non-Veg Pizza. Price: Rs.", base_price)
+# elif category == 1 and pizza_type == 2:
+#     base_price = 500
+#     print("You selected Delux Non-Veg Pizza. Price: Rs.", base_price)
 
-elif category == 2 and pizza_type == 1:
-    base_price = 200
-    print("You selected Normal Veg Pizza. Price: Rs.", base_price)
+# elif category == 2 and pizza_type == 1:
+#     base_price = 200
+#     print("You selected Normal Veg Pizza. Price: Rs.", base_price)
 
-elif category == 2 and pizza_type == 2:
-    base_price = 400
-    print("You selected Normal Non-Veg Pizza. Price: Rs.", base_price)
+# elif category == 2 and pizza_type == 2:
+#     base_price = 400
+#     print("You selected Normal Non-Veg Pizza. Price: Rs.", base_price)
 
-else:
-    print("Invalid input.")
-    exit()
+# else:
+#     print("Invalid input.")
+#     exit()
 
 # # Extra Cheese
 # extra_cheese_charge = 0
@@ -143,3 +143,64 @@ else:
 # print("--------------------------------")
 # print("Net Amount Payable   =", round(net_amount, 2))
 # print("--------------------------------")
+
+#priority queue
+#rēmoove element with highest priority instead of order
+
+#highest [priority]-->remove first
+# not nomal fifo
+#smallest number-->highest priority
+#task 1
+#task 2
+#task 3
+#then task 1 removwe first after that task 2 and then task 3
+
+#real time example
+#1)hospital-->emergency patient-->highest priority
+# hospital emergency room 
+# cpu task scheduling
+# print task priority
+# network packet routing
+
+# normal queue priority queue
+
+#heap
+#smallest element --- highest priority
+#automatic sorting
+#uses heap module in python
+
+#PSYDOCODE
+
+#INSERT ELEMENT WITH PRIORITY
+# REMOVE SMALLEST PRIORITY ELEMENT
+# from os import remove
+
+# import heap module 
+
+
+# remove
+# remove smallest priority element 
+
+
+
+# import heapq
+# pq = []
+# heapq.heappush(pq, 3)
+# heapq.heappush(pq, 1)
+# heapq.heappush(pq, 2)
+# print("Priority Queue:", pq)
+
+# # Remove smallest priority element
+# smallest = heapq.heappop(pq)
+# print("Removed element:", smallest)
+# print("Priority Queue after removal:", pq)
+
+# pq = []
+# import heapq
+# heapq.heappush(pq, (2,"medium task"))
+# heapq.heappush(pq, (1,"high task"))
+# heapq.heappush(pq, (3,"low task"))
+# while pq:
+#     priority, task = heapq.heappop(pq)
+#     print(priority, task) 
+
